@@ -46,6 +46,15 @@
         android:layout_height="wrap_content"
         android:id="@+id/statusText"
         />
+
   </com.google.ar.core.codelabs.hellogeospatial.helpers.MapTouchWrapper>
+
+  <EditText
+      android:id="@+id/editTextText2"
+      android:layout_width="625dp"
+      android:layout_height="823dp"
+      android:ems="10"
+      android:inputType="text"
+      android:text="Name" />
 
 </RelativeLayout>

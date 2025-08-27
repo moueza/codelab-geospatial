@@ -13,6 +13,13 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName '1.0'
+
+        def properties = new Properties()
+        if (rootProject.file("local.properties").exists()) {
+            properties.load(rootProject.file("local.properties").newDataInputStream())
+        }
+        // Must be defined here, whereas the value can be defined in local.properties.
+        manifestPlaceholders = [ GoogleCloudApiKey: properties.getProperty("secretVar", "DEF") ]
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
